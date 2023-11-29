@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4 Lab 4</title>
+   <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="textarea">
+            <h3>Text Area</h3>
+            <input type="textarea" name="" id="">
+        </div>
+        <div class="textfield">
+            <h3>Text Field</h3>
+            <input type="textfield" name="" id="">
+        </div>
+        <div class="check">
+            <h3>Số lần TextField tồn tại trong TextArea</h3>
+           <button class="check-btn">Result</button> =
+           <input type="textcheck" name="" id="checkresult" value="0">
+        </div>
+    </div>
+
+    <script>
+        var textA;
+        var textB ;
+        var result;
+
+        var inputEmlementCheck = document.getElementById('checkresult');
+
+        var inputEmlementTextArea = document.querySelector('input[type="textarea"]');
+        inputEmlementTextArea.onchange = function(e) {
+            textA = e.target.value;
+        }
+        var inputEmlementTextField = document.querySelector('input[type="textfield"]');
+        inputEmlementTextField.onchange = function(e) {
+            textB= e.target.value;
+        }
+        
+        var checkBtb = document.querySelector('.check-btn');
+        function countInstances(string, word) {
+           result = string.split(word).length - 1;
+           console.log(result);
+           inputEmlementCheck.value=result;
+        }
+        checkBtb.onclick = function() {
+        countInstances(textA,textB);
+        }
+    </script>
+</body>
+</html>

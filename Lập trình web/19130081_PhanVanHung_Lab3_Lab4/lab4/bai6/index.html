@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6 Lab 4</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div id="main">
+        <div class="container">
+            <form action="" class="container-section" onsubmit = "return validateForm()" >
+                <div class="form-header">Contact Us</div>
+                <div class="form-content">
+                    <div class="full-name box">
+                        <h6 class="title">FULL-NAME*</h6>
+                        <input type="text" class="input" placeholder="Enter Your Name"  id="name" pattern="[A-Za-z]{1,40}">
+                        <span role="alert" id="nameError" aria-hidden="true">Please enter your name</span>
+                    </div>
+                    <div class="email box">
+                        <h6 class="title">EMAIL*</h6>
+                        <input type="email" class="input" placeholder="Enter Your Email" id="email">
+                        <span role="alert" id="emailError" aria-hidden="true">Please enter your email</span>
+                    </div>
+                    <div class="phone box">
+                        <h6 class="title">PHONE</h6>
+                        <input type="text1" class="input " placeholder="Enter Your Phone" id="phone" pattern=".{10,}">
+                    </div>
+                    <div class="select-main box-sub">
+                        <h6 class="title">NEEDED SERVICES</h6>
+                        <select name="" id="services">
+                            <option value="-1">Please chooses</option>
+                            <option value="1">Hổ trợ kĩ thuật</option>
+                            <option value="2">Tư vấn khách hàng</option>
+                            <option value="3">Trả góp lãi xuất 0%</option>
+                            <option value="4">A</option>
+                            <option value="5">B</option>
+                            <option value="6">C</option>
+                            <option value="7">D</option>
+                            <option value="8">E</option>
+                            <option value="9">F</option>
+                        </select>
+
+                    </div>
+                    <div class="message box">
+                        <h6 class="title">MESSAGE*</h6>
+                        <input type="text" class="input input-message" placeholder="Your message here" id="message">
+                        <span role="alert" id="messageError" aria-hidden="true" >Please enter message</span>
+
+                    </div>
+                    <button href="" id="submit" class="submit-section">Submit <i class="ti-arrow-right " ></i> </button>
+                </div>
+            </form>
+        </div>
+    </div>
+   <script src="./main.js"></script>
+</body>
+</html>

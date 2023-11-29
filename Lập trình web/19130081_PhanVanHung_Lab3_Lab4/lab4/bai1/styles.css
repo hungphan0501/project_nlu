@@ -1,0 +1,54 @@
+* {
+padding: 0;
+margin: 0;
+box-sizing: 0;
+}
+html {
+font-family: Helvetica, Arial, sans-serif;
+background-color: #ebebeb;
+}
+#content {
+background-color: #ddd;
+width: 100%;
+height: 950px;
+}
+
+.box{
+min-width: 10%;
+padding: 15px 0;
+float: left;
+cursor: pointer;
+border: none;
+border: 10px solid rgb(255, 255, 255);
+}
+#btn1{
+background-color: red;
+}
+#btn2{
+background-color: blue;
+}
+#btn3{
+background-color: black;
+color: #fff;
+}
+#btn4{
+background-color: white;
+}
+#btn5{
+background-color: lime;
+}
+#btn6{
+background-color: yellow;
+}
+#btn7{
+background-color: cyan;
+}
+#btn8{
+background-color: green;
+}
+#btn9{
+background-color: purple;
+}
+#btn10{
+background-color: teal;
+}

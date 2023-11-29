@@ -1,0 +1,308 @@
+html ,body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: helvetica,sans-serif;
+    font-size: 13px;
+    color: #000;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+#page {
+    width: 100%;
+    margin: 0;
+    padding: 0 ;
+}
+#page .container {
+   margin: 0 200px;
+}
+
+#page #section_text_2 {
+    height: 120px;
+    background-color: #f3f3f3;
+}
+#page #section_text_2 .alpha {
+    width: 50%;
+    float: left;
+    text-align: left;
+    padding-top: 35px;
+}
+#page #section_text_2 .alpha .logo {
+    width: 165px;
+}
+#page #section_text_2 .omega {
+    width: 50%;
+    float: right;
+    text-align: right;
+    margin-top: 45px;    
+}
+#page #section_text_2 .omega .pix_button {
+    padding: 20px 30px;
+    background-color: #f77825;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 125%;
+}
+/*  */
+#page #section_header_1 {
+    background-color: #fff;
+    height: 80px;
+}
+#page #section_header_1 .right_socials {
+    float: right;
+    width: 30%;
+    min-width: 150px;
+}
+#page #section_header_1 .right_socials ul li {
+    float: right;
+    list-style: none;
+    color: #7f7f7f7f;
+    
+}
+#page #section_header_1 .right_socials ul li img {
+    width: 30px;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+#page #section_header_1 .navbar-collapse {
+    float: left;
+    width: 70%;
+    padding-top: 15px;
+}
+#page #section_header_1 .navbar-collapse ul{
+    margin-left: -40px;
+}
+#page #section_header_1 .navbar-collapse ul li {
+    list-style: none;
+    float: left;
+    clear: right;
+    padding-right: 50px;
+}
+#page #section_header_1 .navbar-collapse ul li:hover {
+    padding-right: 40px;
+
+}
+#page #section_header_1 .navbar-collapse ul li:hover a {
+    font-size: 180%;
+}
+#page #section_header_1 .navbar-collapse ul li a {
+    color: rgb(80, 79, 79);
+    text-decoration: none;
+    font-size: 150%;
+    font-weight: both;
+}
+#page #section_slider {
+    background-color: #f3f3f3;
+    height: 600px;
+}
+
+/* slider */
+#page .img-slider {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 80px;
+}
+#page .carousel-caption {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 20px;
+    color: #ffff;
+}
+
+#page .column {
+    float: left;
+    width: 33.333%;
+    text-align: center;
+}
+#page .gym_life .top_padding {
+    height: 450px;
+}
+#page .gym_life .logo_style {
+    border-radius: 50%;
+    margin:70px 0 20px 0;
+}
+#page .gym_life .gym_st {
+    font-weight: bold;
+    font-size: 18px;margin-bottom: 20px;
+}
+#page .gym_life .gym_text {
+    color: rgb(116, 114, 114);
+    padding: 0 70px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+#page .gym_life .slow_fade-pix_text {
+    background-color: #f77825;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffff;
+}
+#page .gym_life .slow_fade-pix_text:hover {
+    background-color: #ff5100;
+
+}
+#page #section_intro_title{
+    background-color: #f3f3f3;
+    height: 520px;
+}
+#page .one-third {
+    background-color: #ffff;
+    height: 450px;
+    width:340px;
+    border: 2px solid #ccc;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    /* margin-left: 10px; */
+}
+#page .flat_pricing_list {
+    list-style: none;
+    margin-right: 35px;
+}
+#page .flat_pricing_list li {
+    margin: 40px 0;
+    font-size: 15px;
+    color: rgb(119, 115, 115);
+
+}
+#page .orange,
+#page .blue_text {
+    font-weight: bold;
+    font-size: 50px;
+    color: #2dc0e8;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#page .orange {
+    color: #f77825;
+}
+#page .light_gray-editContent {
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+#page .active_bg_open {
+    background: #f77825;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffff;
+    font-size: 17px;
+}
+#page .active_bg_open:hover {
+    background: #ff5100;
+
+}
+#page .blue_bg {
+    background-color:#2dc0e8 ;
+}
+#page .blue_bg:hover {
+    background-color:#00aeff ;
+}
+#page .subscribe {
+    background-color: #191919;
+    height: 600px;
+    display: block;
+    position: relative;
+}
+#page .subscribe .text_input {
+    position: absolute;
+    background-color: black;
+    text-align: center;
+    width: 450px;
+    height: 500px;
+    margin-left: 22%;
+    border-radius: 3px;
+    margin-top: 50px;
+}
+#page .subscribe .headtext_style {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(226, 223, 223);
+    margin: 50px 0 20px;
+}
+#page .subscribe .segment {
+    width: 100px;
+    height: 5px;
+    background-color: #2271e3;
+    margin-left: 40%;
+    margin-bottom: 30px;
+}
+#page .subscribe .subtext_style {
+    width: 80%;
+    font-size: 20px;
+    color: rgb(190, 190, 190);
+    margin-left: 45px;
+    margin-bottom: 60px;
+}
+#page .subscribe .pix_text-input {
+    padding: 20px 15px;
+    width: 87%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid#fff;
+}
+#page #submit_btn_15 {
+    padding: 20px 0;
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid #2271e3;
+    background-color: #2271e3;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 15px;
+}
+#page #submit_btn_15:hover {
+    border: 1px solid #006aff;
+    background-color: #006aff;
+    cursor: pointer;
+}
+#page #section_party_4 {
+    position: relative;
+    height: 60px;
+    background-color: black;
+
+}
+#page #section_party_4 .seven {
+    position: absolute;
+    margin-top:25px;
+    width: 50%;
+}
+#page #section_party_4 .rights_st {
+    color: rgb(190, 190, 190);
+    font-size: 15px;
+}
+#page #section_party_4 .nine {
+    /* position: absolute; */
+    float: right;
+    width: 50%;
+    color: rgb(190, 190, 190);
+    font-size: 15px;
+    height: 60px;
+    text-align: right;
+   
+}
+#page #section_party_4 .nine-sub{
+    list-style: none;
+    float: right;
+    margin-top: -30px;
+}
+#page #section_party_4 .nine-sub li {
+    float: left;
+    padding: 0 5px;
+}
+#page #section_party_4 .nine-sub li img{
+    width: 25px;
+    margin-top: 5px;
+}
+#page #section_party_4 .nine-content-sub {
+    margin-top: 25px;
+    margin-right: 120px;
+}

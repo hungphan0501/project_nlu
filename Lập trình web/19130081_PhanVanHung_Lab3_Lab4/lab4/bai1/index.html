@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bai1 lab4</title>
+        <link rel="stylesheet" href="./styles.css">
+     
+    </head>
+    <body>
+        <input type="button" class="box" id="btn1" value="Red"/>
+        <input type="button" class="box" id="btn2" value="Blue"/>
+        <input type="button" class="box" id="btn3" value="Black"/>
+        <input type="button" class="box" id="btn4" value="White"/>
+        <input type="button" class="box" id="btn5" value="Lime"/>
+        <input type="button" class="box" id="btn6" value="Yeloow"/>
+        <input type="button" class="box" id="btn7" value="Cyan"/>
+        <input type="button" class="box" id="btn8" value="Green"/>
+        <input type="button" class="box" id="btn9" value="Purple"/>
+        <input type="button" class="box" id="btn10" value="Teal"/>
+
+        <div id="content" >
+        </div>
+
+        <script language="javascript">
+            // Lấy 10 button và thẻ div
+            var button1 = document.getElementById("btn1");
+            var button2 = document.getElementById("btn2");
+            var button3 = document.getElementById("btn3");
+            var button4 = document.getElementById("btn4");
+            var button5 = document.getElementById("btn5");
+            var button6 = document.getElementById("btn6");
+            var button7 = document.getElementById("btn7");
+            var button8 = document.getElementById("btn8");
+            var button9 = document.getElementById("btn9");
+            var button10 = document.getElementById("btn10");
+
+            var div = document.getElementById('content');
+
+            // Thiết lập click cho 10 button 
+            button1.onclick = function () {
+                div.style.background = "red";
+            };
+            button2.onclick = function () {
+                div.style.background = "blue";
+            };
+            button3.onclick = function () {
+                div.style.background = "black";
+            };
+            button4.onclick = function () {
+                div.style.background = "white";
+            };
+            button5.onclick = function () {
+                div.style.background = "lime";
+            };
+            button6.onclick = function () {
+                div.style.background = "yellow";
+            };
+            button7.onclick = function () {
+                div.style.background = "cyan";
+            };
+            button8.onclick = function () {
+                div.style.background = "green";
+            };
+            button9.onclick = function () {
+                div.style.background = "purple";
+            };
+            button10.onclick = function () {
+                div.style.background = "teal";
+            };
+        </script>
+    </body>
+</html>

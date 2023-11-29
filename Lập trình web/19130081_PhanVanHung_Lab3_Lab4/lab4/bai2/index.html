@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 Lab4</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var a = parseFloat (prompt("nhap a","1"));
+        var b = parseFloat (prompt("nhap b","1"));
+        var c = parseFloat (prompt("nhap c","1"));
+
+        var delta = ((b*b)-(4*a*c));
+ 
+        if (delta == 0) {
+            alert ("Phương trình có nghiệm kép: x1 = x2 = " +(-b/2/a) +" ");
+        }
+        else {
+            if (delta > 0) {
+                alert ("Phương trình có 2 nghiệm: \nNghiệm X1 =  "+ ((-b-Math.sqrt(delta))/2/a)+"\nNghiệm X2 = "+ ((-b+Math.sqrt(delta))/2/a)+" ");
+            }
+            else {
+                alert ("Phương trình vô nghiệm!");
+            }
+        }
+
+    </script>
+</body>
+</html>

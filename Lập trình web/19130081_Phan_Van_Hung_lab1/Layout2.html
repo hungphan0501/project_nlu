@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 2</title>
+    <style>
+        #main .header,
+        #main .nav,
+        #main .index,
+        #main .footer,
+        #main .content-sub {
+            border: 1px solid #000;
+            font-size: 50px;
+        }
+
+        #main .header {
+            height: 80px;
+        }
+
+        #main .nav {
+            height: 80px;
+        }
+
+        #main .content {
+            height: 450px;
+        }
+        #main .content .index{
+            float: left;
+            width: 20%;
+            height: 450px;
+        }
+        #main .content .content-sub{
+            float: left;
+            width: 79%;
+            height: 450px;
+            padding-right: 11px;
+        }
+
+        #main .footer {
+            height: 120px;
+        }
+
+        #main .nav-section,
+        #main .header-section {
+            text-align: center;
+            margin-top: 0px;
+
+        }
+
+        #main .index-section {
+            text-align: center;
+            margin-top: 50%;
+
+        }
+        #main .content-section {
+            text-align: center;
+            margin: 170px 0 0 -300px;
+
+        }
+
+        #main .footer-section {
+            text-align: center;
+           margin-top: 30px;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="header ">
+            <h4 class="header-section">Header Section</h4>
+        </div>
+
+        <div class="nav ">
+            <h4 class="nav-section">Navigation Bar</h4>
+        </div>
+
+        <div class="content">
+            <div class="index  col-hafl">
+                <h4 class="index-section">Index</h4>
+            </div>
+
+            <div class="content-sub  col-hafl">
+                <h4 class="content-section">Content Section</h4>
+            </div>
+        </div>
+
+        <div class="footer ">
+            <h4 class="footer-section">Footer Section</h4>
+        </div>
+    </div>
+</body>
+</html>

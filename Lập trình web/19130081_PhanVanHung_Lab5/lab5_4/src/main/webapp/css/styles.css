@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+html {
+    font-family: Arial Black ;
+    background-color: #e6e6e6;
+}
+.box-sub {
+    height: 70px;
+    background-color: #f7f7f7;
+    margin-top: 105px ;
+    margin-bottom: 16px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 10px;
+
+}
+.box{
+    margin: 8px 0;
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    border: 1px solid rgb(224, 224, 224);
+}
+.container {
+    width: 800px;
+    height: 690px;
+    background-color: #ffff;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: -10px;
+    display: block;
+}
+.container .container-section {
+    margin: 50px;
+}
+.container .form-header {
+    margin: auto;
+    padding: 50px 0 30px;
+    font-size: 40px;
+    max-width: 250px;
+}
+.container .form-content .input{
+    width: 100%;
+    padding: 15px 0 3px;
+    border: none;
+    background-color:  #f7f7f7;
+    outline: none;
+}
+.container .email {
+    float: left;
+    width: 44%;
+}
+.container .phone {
+    float: right;
+    width: 44%;
+}
+#services {
+    width:98%;
+    padding: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    outline: none;
+}
+.container .select-main h6 {
+    margin: 15px 15px 0;
+}
+.container h6 {
+    font-size: 10px;
+}
+.container .message {
+    background-color: #ffff;
+}
+.container .form-content .input-message {
+    padding-bottom: 70px;
+    background-color: #ffff;
+}
+.container .submit-section button {
+    color: #ffff;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    background-color: #333333;
+    border-radius: 50px;
+    padding: 10px 0;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.container .submit-section  i {
+    margin-left: 10px;
+}

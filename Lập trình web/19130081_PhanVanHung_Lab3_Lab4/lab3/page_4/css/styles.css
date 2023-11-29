@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #ebebeb;
+} 
+.col-half {
+    float: left;
+    width: 50%;
+}
+.color-green {
+    margin: 18px 0;
+    font-size: 15px;
+    color: #7ed321;
+}
+.box-sub,
+.box {
+    width: 400px;
+    background-color: #f9f9f9;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.box-sub {
+    width: 190px;
+}
+.container {
+    width: 480px;
+    height: 720px;
+    margin: 20px auto;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 0 20px rgb(88, 86, 86);
+}
+
+.container .icon {
+    width: 18px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    display: block;
+}
+.container .input {
+    width: 83%;
+    float: right;
+    margin-top: -30px;
+    padding: 10px 10px;
+    border: none;
+    background-color: #f9f9f9;
+    border-left:1px solid #ccc ;
+    outline: none;
+}
+.container .input-sub {
+    width: 59%;
+    float: right;
+    margin-top: -30px;
+    margin-right: 10px;
+    padding: 10px 10px;
+    border: none;
+    background-color: #f9f9f9;
+    border-left:1px solid #ccc ;
+    outline: none;
+}
+.container li {
+    list-style-type: none;
+    display: inline-block;
+}
+.container .account-section{
+    margin-top: 0px;
+}
+.container .infor {
+    display: block;
+}
+.container .infor .date-of-thirth li{
+    float: left;
+    width: 33.33333%;
+}
+.container .infor .dd,
+.container .infor .mm,
+.container .infor .yyyy{
+    padding: 14px 3px;
+    text-align: center;
+    width: 50px;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.container .infor .yyyy,
+.container .infor .mm {
+    margin-left: 4px;
+}
+.container-section {
+    margin: 40px;
+}
+.container .gender li {
+    width: 47%;
+    height: 45px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.container .gender .male,
+.container .gender .female {
+    display: block;
+    margin-top: 10px;
+    color: rgb(148, 148, 148);
+    text-decoration: none;
+}
+.gender li.color {
+    background-color: #7ed321;
+    border: 1px solid #77b731;
+}
+.container .payment {
+    margin-top: 140px;
+    display: block;
+}
+.container .card a {
+    background-color: #f9f9f9;
+    text-decoration: none;
+}
+.container .card {
+    display: block;
+    height: 60px;
+}
+.container .card .paypal,
+.container .card .credit {
+    width: 49%;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+.container .card .paypal {
+    width: 50%;
+    padding: 10px 0;
+    
+}
+.container .card a.bg-color {
+     background-color: #7ed321;
+    border: 1px solid #77b731;
+    color: #fff;
+}
+.container #icon-card {
+    width: 30px;
+    margin-left: 55px;
+    margin-top: 3px;
+}
+.container .card h5 {
+    width: 54%;
+    margin-top: 5px;
+    float: right;
+    display: block;
+}
+.container #date {
+    width: 100px;
+    padding: 16.5px ;
+    margin-top: -5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    display: block;
+}
+.container .selection {
+    margin-left: 10px;
+    margin-top: 5px;
+    max-width: 49%;
+}
+.dd-mm-select > #date {
+    border-top-left-radius:5px ;
+    border-bottom-left-radius: 5px;
+}
+.yyyy-select > #date {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.container .footer {
+    display: block;
+    float: left;
+}
+.container .footer .check{
+    margin-top: -5px;
+}
+.container .footer .check p{
+    font-size: 13px;
+    float: right;
+    width: 95%;
+    color: darkgray;
+}
+
