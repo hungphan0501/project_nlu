@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Category | Dragon Sport</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="e-commerce site well design with responsive view."/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link th:href="@{/assets/bootstrap/css/bootstrap.min.css}" href="/assets/bootstrap/css/bootstrap.min.css"
+          rel="stylesheet"
+          media="screen"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link th:href="@{/assets/css/stylesheet.css}" href="/assets/css/stylesheet.css" rel="stylesheet">
+    <link th:href="@{/assets/css/responsive.css}" href="/assets/css/responsive.css" rel="stylesheet">
+    <link th:href="@{/assets/owl-carousel/owl.carousel.css}" href="/assets/owl-carousel/owl.carousel.css"
+          type="text/css" rel="stylesheet"
+          media="screen"/>
+    <link th:href="@{/assets/owl-carousel/owl.transitions.css}" href="/assets/owl-carousel/owl.transitions.css"
+          type="text/css"
+          rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" th:href="@{/assets/css/all.css}" href="/assets/css/all.css">
+    <script th:src="@{/assets/javascript/jquery-2.1.1.min.js}" src="/assets/javascript/jquery-2.1.1.min.js"
+            type="text/javascript"></script>
+    <script th:src="@{/assets/bootstrap/js/bootstrap.min.js}" src="/assets/bootstrap/js/bootstrap.min.js"
+            type="text/javascript"></script>
+    <script th:src="@{/assets/javascript/jstree.min.js}" src="/assets/javascript/jstree.min.js"
+            type="text/javascript"></script>
+    <script th:src="@{/assets/javascript/template.js}" src="/assets/javascript/template.js"
+            type="text/javascript"></script>
+    <script th:src="@{/assets/javascript/common.js}" src="/assets/javascript/common.js" type="text/javascript"></script>
+    <script th:src="@{/assets/javascript/global.js}" src="/assets/javascript/global.js" type="text/javascript"></script>
+    <script th:src="@{/assets/owl-carousel/owl.carousel.min.js}" src="/assets/owl-carousel/owl.carousel.min.js"
+            type="text/javascript"></script>
+    <link rel="shortcut icon" th:href="@{/assets/images/logo.png}" href="/assets/images/logo.png"/>
+
+    <link rel="stylesheet" th:href="@{/assets/css/dat-css.css}" href="/assets/css/dat-css.css">
+    <link rel="stylesheet" th:href="@{/assets/css/khanh-css.css}" href="/assets/css/khanh-css.css">
+    <link rel="stylesheet" th:href="@{/assets/css/hung-css.css}" href="/assets/css/hung-css.css">
+    <script th:src="@{/assets/javascript/khanh-js.js}" src="/assets/javascript/khanh-js.js"
+            type="text/javascript"></script>
+
+
+</head>
+
+<body class="category col-2 left-col">
+<header>
+    <div class="contain-header-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 contain-header">
+                    <div class="contain-nav-info">
+                        <div id="top-links" class="nav pull-left">
+                            <ul class="list-inline">
+                                <li class="account"><a href="/admin/pixelwibes.com/template/ebazar/html/dist/index.html"
+                                                       class="notify"><i
+                                        class="fas fa-bell color-header" style="margin-right: 10px"></i>
+                                    <sp
+                                            style="margin: 0 5px;" class="color-header">Thông
+                                        báo
+                                    </sp>
+                                    <span style="margin-right: 10px;"
+                                          class="color-header">(0)</span></a>
+                                </li>
+                                <li class="account"><a href="customer.html" id="wishlist-total"
+                                                       title="Wish List (0)"><i
+                                        class="fa fa-heart color-header"></i><span
+                                        class="color-header">Danh sách
+                                                yêu thích</span><span style="margin-right: 10px;"
+                                                                      class="color-header">(0)</span></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"
+                                       sec:authorize="!isAuthenticated()">
+                                        <i class="fa fa-user color-header"></i><span class="color-header">Tài
+                                                khoản</span> <span style=" font-size: 15px;"
+                                                                   class="caret color-header"></span></a>
+                                    <a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"
+                                       sec:authorize="isAuthenticated()">
+                                        <i class="fa fa-user color-header"></i><span class="color-header"
+                                                                                     th:text="'Hi! '+${@userController.nameByEmail()}">
+                                                </span> <span style=" font-size: 15px;"
+                                                              class="caret color-header"></span></a>
+                                    <ul class="dropdown-menu dropdown-menu-right" sec:authorize="!isAuthenticated()">
+                                        <li><a th:href="@{/login}" class="js-login">Đăng Nhập</a></li>
+                                        <li><a th:href="@{/registration}" class="js_register">Đăng Ký</a></li>
+                                    </ul>
+                                    <ul class="dropdown-menu dropdown-menu-right" sec:authorize="isAuthenticated()">
+                                        <li><a th:href="@{/user/infor}" class="js-login">Hồ sơ</a></li>
+                                        <li><a th:href="@{/logout}" class="js_register">Đăng xuất</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header-inner">
+
+                <div class="header-top">
+                    <div>
+                        <div class="header-middle-top">
+                            <div id="logo" class="color-header" style="margin: 0; padding: 0;">
+                                <a th:href="@{/}"><img th:src="@{/assets/images/logo.png}" src="/assets/images/logo.png"
+                                                       title="E-Commerce" alt="E-Commerce"
+                                                       class="logo-header"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form th:action="@{/search}" method="GET">
+                    <div class="text-center contain-search">
+                        <div class="contain-search-product-popular">
+                            <div class="search-product">
+                                <input class="input-text-search-top" placeholder="Tìm kiếm" type="text" name="content">
+                                <button class="search-product-top"><i class="fa fa-search"></i></button>
+                            </div>
+                            <div class="contain-search-popular">
+                                <span>X-Ray 2</span>
+                                <span>Nike Air Force 2</span>
+                                <span>Under Armour darkside</span>
+                                <span>X9000L4 Shoes Mens</span>
+                                <span>Adidas dragon sport</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="col-sm-4 col-xs-12 header-right header-nav-right">
+
+                    <div id="cart" class="btn-group btn-block" style="margin: 0; padding: 0;">
+                        <button type="button"
+                                class="btn btn-inverse btn-block btn-lg dropdown-toggle cart-dropdown-button cart-nav">
+                            <span class="cart-title color-header" style="float: left;margin: 9px;">Giỏ hàng - </span>
+                            <span id="cart-total" class="color-header"  sec:authorize="isAuthenticated()"  th:text="${totalPrice} + '$'">254.000 Đ</span>
+                            <span class="value-header-product" style="margin-bottom: 10px"
+                                  sec:authorize="isAuthenticated()" th:if="${carts }!= null" th:text="${carts.size()}">1</span>
+                            <i class="fas fa-shopping-cart cart-icon-nav"></i>
+                        </button>
+
+
+                        <ul class="dropdown-menu pull-right cart-dropdown-menu">
+                            <li style="display: grid;
+                                max-height: 300px;
+                                overflow-y: scroll;
+                                overflow-x: hidden;
+                             " class=" filter-search">
+                                <table class="table table-striped">
+                                    <tbody>
+                                    <tr  sec:authorize="isAuthenticated()" th:if="${carts}!=null" th:each="cart : ${carts}">
+                                        <td class="text-center">
+                                            <a href="#"><img
+                                                    th:src="@{/assets/images/product/{img}(img=${@cartController.getProductByIdDetail(cart.idProductDetail).img})}"
+                                                    src="/assets/images/product/product-01.jpg" width="100px"
+                                                    height="100px"></a>
+                                        </td>
+                                        <td class="text-left"><a href="#"
+                                                                 th:text="${@cartController.getProductByIdDetail(cart.idProductDetail).name}">lorem
+                                            ippsum dolor dummy</a></td>
+                                        <td class="text-right"
+                                            th:text="(${@cartController.getProductByIdDetail(cart.idProductDetail).price} * (100 -${@cartController.getProductByIdDetail(cart.idProductDetail).saleRate}) /100) *${cart.quantity} +'$'">
+                                            $254.00
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger btn-xs"
+                                                    title="Remove" type="button"><i
+                                                    class="fa fa-times"></i></button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </li>
+                            <li>
+                                <div>
+                                    <table class="table table-bordered">
+                                        <tbody>
+
+                                        <tr>
+                                            <td class="text-right"><strong>Tạm tính</strong></td>
+                                            <td class="text-right" th:text="${totalPrice} +'$'">254.000Đ</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="text-right"> <span class="btn-viewcart"><a th:href="@{/cart}"><strong><i
+                                            class="fa fa-shopping-cart"></i> View
+                                                        Cart</strong></a></span> <span class="btn-checkout"><a
+                                            th:href="@{/cart}"><strong><i class="fa fa-share"></i>
+                                                        Checkout</strong></a></span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="bt-nav-collapse hidden-lg hidden-md"><i
+                        class="fa fa-bars"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <nav id="menu-navigation" class="navbar" style="width: 100%;">
+        <!--function displayMenuNavigation() in khanh-js.js-->
+    </nav>
+</header>
+<div class="container-category">
+
+    <div class="row contain-category">
+        <button class="toggle-filter-search">
+            <i class="fas fa-sliders-h"></i>
+        </button>
+        <div class="col-sm-3 contain-filter-search" style="margin-right: 90px;">
+            <div class="panel panel-default filter" style="padding-top: 0">
+                <form th:action="@{/products/filter}" method="GET">
+                    <div class="filter-block">
+                        <div class="list-group">
+                            <a class="list-group-item">Nhãn hàng</a>
+                            <div class="list-group-item">
+                                <div class="contain-dropdown-item filter-search">
+                                    <label class="checkbox-filter-search">
+                                        <input name="brand" type="checkbox" value="1"/>
+                                        ADIDAS</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="brand" type="checkbox" value="2"/>
+                                        ON RUNNING</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="brand" type="checkbox" value="3"/>
+                                        PUMA</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="brand" type="checkbox" value="4"/>
+                                        Reebok</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="brand" type="checkbox" value="17"/>
+                                        NIKE</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="brand" type="checkbox" value="10"/>
+                                        ASICS</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="brand" type="checkbox" value="9"/>
+                                        VANS</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="brand" type="checkbox" value="7"/>
+                                        UNDER ARMOUR</label>
+                                    <input type="hidden" name="brands">
+
+                                </div>
+                            </div>
+                            <a class="list-group-item">Kích thước</a>
+                            <div class="list-group-item">
+                                <div class="contain-dropdown-item filter-search">
+                                    <label class="checkbox-filter-search">
+                                        <input name="size" type="checkbox" value="36"/>
+                                        SIZE 36</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="size" type="checkbox" value="37"/>
+                                        SIZE 37</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="size" type="checkbox" value="38"/>
+                                        SIZE 38</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="size" type="checkbox" value="39"/>
+                                        SIZE 39</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="size" type="checkbox" value="40"/>
+                                        SIZE 40</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="size" type="checkbox" value="41"/>
+                                        SIZE 41</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="size" type="checkbox" value="42"/>
+                                        SIZE 42</label>
+                                    <label class="checkbox-filter-search">
+                                        <input name="size" type="checkbox" value="43"/>
+                                        SIZE 43</label>
+                                    <input type="hidden" name="sizes">
+                                </div>
+                            </div>
+                            <a class="list-group-item">Đánh giá</a>
+                            <div class="list-group-item">
+                                <div id="filter-group2" class="contain-rate-search">
+                                    <span class="rate-search">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span style="margin-left: 5px">5 sao</span>
+                                    </span>
+                                    <span class="rate-search">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span style="margin-left: 5px">4 sao</span>
+                                    </span>
+                                    <span class="rate-search">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span style="margin-left: 5px">3 sao</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <a class="list-group-item">Giá</a>
+                            <div class="list-group-item">
+                                <div id="filter-group3" class="contain-price-search">
+                                    <form class="price-search-highest-lowest">
+                                        <input type="radio" id="price-search-highest" name="price-sort" value="1" checked
+                                               style="margin-top: 10px;">
+                                        <label for="price-search-highest" style="    margin-top: -17px;">Từ cao đến thấp</label>
+                                        <input type="radio" id="price-search-lowest" name="price-sort" value="0"
+                                               style="margin-top: 10px;">
+                                        <label for="price-search-lowest" style="    margin-top: -17px;" >Từ thấp đến cao</label>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer text-right">
+                            <button type="submit" id="button-filter" class="btn btn-primary btn-refine-search">Tìm kiếm
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+        <div id="content" class="content-about">
+            <div class="mainbanner" style="padding: 10px; width: 100%; background-color: #f3f3f3;">
+                <div id="main-banner" class="owl-carousel home-slider">
+                    <div class="item">
+                        <a href="#"><img id="category-carousel-intro-1" alt="main-banner1"
+                                         class="img-responsive img-border-radius" style="width: 100%;"/></a>
+                        <div class="main-banner-section-center">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img id="category-carousel-intro-2" alt="main-banner2"
+                                         class="img-responsive img-border-radius" style="width: 100%;"/></a>
+                        <div class="main-banner-section-center">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img id="category-carousel-intro-3" alt="main-banner3"
+                                         class="img-responsive img-border-radius" style="width: 100%;"/></a>
+                        <div class="main-banner-section-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid-list-wrapper bg-item">
+                <div th:each="product : ${products}">
+                    <div class="product-layout product-grid col-lg-4 col-md-5 col-sm-6 col-xs-10"
+                         style="background-color: white; padding: 10px 0">
+                        <div class="product-thumb">
+                            <div class="image product-imageblock" style="height: 200px !important">
+                                <a th:href="@{/product/detail/{idProduct}(idProduct=${product.id})}">
+                                    <div class="related-product-sale" th:if="${product.saleRate == 0}" style="top: 0px !important;">
+                                        <h5 style="margin-top: 10px" >New</h5>
+                                    </div>
+                                    <div class="related-product-sale" th:if="${product.saleRate > 0}" style="top: 0px !important;">
+                                        <h5 style="margin-top: 10px" th:text="'-' +${product.saleRate}+'%'"> -20%</h5>
+                                    </div>
+                                    <img th:src="@{'/assets/images/product/' + ${product.getImg()}}" id="imgCategory"
+                                         alt="lorem ippsum dolor dummy" title="lorem ippsum dolor dummy"
+                                         class="img-responsive item-img-list">
+                                </a>
+                                <div class="button-group button-group-list-category">
+                                    <button type="button" class="wishlist" data-toggle="tooltip"
+                                            title="Add to Wish List"><i class="fas fa-heart"></i></button>
+                                    <button type="button" class="addtocart-btn">Mua Ngay</button>
+                                    <button type="button" class="compare" data-toggle="tooltip"
+                                            title="Compare this Product"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <div class="caption product-detail intro-product-detail-list">
+                                <h2 id="brandCategory" style="margin-top: 5px; text-transform: uppercase"><span th:text="${brandName}"></span></h2>
+                                <h4 class="product-name">
+                                    <a th:href="@{/product/detail/{idProduct}(idProduct=${product.id})}" id="nameCategory"  title="lorem ippsum dolor dummy"
+                                       style="text-transform: capitalize">
+                                        <span th:text="${product.getName()}"></span></a>
+                                </h4>
+                                <p class="product-desc"><span th:text="${product.getDescription()}"></span></p>
+                                <p id="priceCategory" class="price product-price produce-price-list">
+                                    <span class="price-old" style="margin-right: 10px"><span th:text="${product.getPrice()*1.4 +' $'}"></span></span>
+                                    <span th:text="${product.getPrice()+' $'}"></span>
+                                </p>
+                                <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i
+                                        class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i
+                                        class="fa fa-star fa-stack-2x"></i><i
+                                        class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i
+                                        class="fa fa-star fa-stack-2x"></i><i
+                                        class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i
+                                        class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i
+                                        class="fa fa-star-o fa-stack-2x"></i></span></div>
+                            </div>
+                            <div class="button-group button-group-list-category">
+                                <button type="button" class="wishlist" data-toggle="tooltip" title="Add to Wish List"><i
+                                        class="fas fa-heart"></i></button>
+                                <button type="button" class="addtocart-btn">Mua Ngay</button>
+                                <button type="button" class="compare" data-toggle="tooltip"
+                                        title="Compare this Product"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--            <div class="category-page-wrapper" style="background-color: white;">-->
+            <!--                <div class="pagination-inner" id="tessss">-->
+            <!--                    <ul class="pagination">-->
+            <!--                        &lt;!&ndash; function displayPagination() in khanh-js &ndash;&gt;-->
+            <!--                    </ul>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</div>
+<footer style="margin: 10px 0;">
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-sm-3 footer-block">
+                <h5 class="footer-title">Thông tin</h5>
+                <ul class="list-unstyled ul-wrapper">
+                    <li><a href="about-us.html">Về chúng tôi</a></li>
+                    <li><a href="checkout.html">Thông tin giao hàng</a></li>
+                    <li><a href="#">Chính sách</a></li>
+                    <li><a href="#">Luật &amp; Điều kiện</a></li>
+                    <li><a href="#">Bản đồ</a></li>
+                    <li><a href="#">Danh sách yêu thích</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 footer-block">
+                <h5 class="footer-title">Why Choose</h5>
+                <ul class="list-unstyled ul-wrapper">
+                    <li><a href="contact.html">Liên lạc</a></li>
+                    <li><a href="#">Voucher quà tặng</a></li>
+                    <li><a href="#">Trả hàng</a></li>
+                    <li><a href="#">Vận chuyển</a></li>
+                    <li><a href="#">Giúp đỡ & FAQs</a></li>
+                    <li><a href="#">Sale trong hôm nay</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 footer-block">
+                <h5 class="footer-title">Tài khoản của tôi</h5>
+                <ul class="list-unstyled ul-wrapper">
+                    <li><a href="#">Đăng nhập</a></li>
+                    <li><a href="#">Voucher quà tặng</a></li>
+                    <li><a href="#">Chi nhánh</a></li>
+                    <li><a href="#">Giỏ hàng</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                    <li><a href="#">Theo dõi hóa đơn</a></li>
+                    <li><a href="#">Giúp đỡ</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 footer-block">
+                <div class="content_footercms_right">
+                    <div class="footer-contact">
+                        <h5 class="contact-title footer-title">Liên lạc</h5>
+                        <ul class="ul-wrapper">
+                            <li> 29/1, đường số 4, KP.3, P. Bình Khánh, Q.2, TPHCM, Việt Nam</li>
+                            <li><span class="mail2"><a
+                                    href="#">info@localhost.com</a></span></li>
+                            <li><i class="fa fa-mobile"></i><span class="phone2">+91 0987-654-321<br>+91
+                                        0987-654-321</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer-top-cms">
+                <div class="col-sm-7">
+                    <div class="newslatter">
+                        <form>
+                            <h5>Đăng kí để nhận thư</h5>
+                            <div class="input-group">
+                                <input type="text" class=" form-control" placeholder="email@website.com">
+                                <button type="submit" value="Sign up"
+                                        class="btn btn-large btn-primary">Đăng kí
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="footer-social">
+                        <h5>Mạng xã hội</h5>
+                        <ul>
+                            <li class="facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                            <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li class="twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                            <li class="gplus"><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+                            <li class="youtube"><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="scrollup">Scroll</a>
+</footer>
+
+
+<!--Begin: login-registe-->
+<div class="login-modal js-modal">
+    <!-- Begin: modal login -->
+    <div class="modal-container js-modal-container">
+
+
+        <header class="modal-header">
+            Tài Khoản Của Bạn!
+        </header>
+
+        <div class="modal-close js-modal-close">
+            <i class="ti-close icon-close"></i>
+        </div>
+
+        <div class="modal-body">
+            <div class="modal-body-login">
+                <div class="modal-login sub col-half">Đăng Nhập</div>
+                <div class="modal-rgister js-register-modal sub col-half">Đăng Ký</div>
+            </div>
+
+            <div class="sub-login">
+                <p class="login-another">_____________ Đăng Nhập Bằng Cách Khác ____________</p>
+            </div>
+
+            <div class="modal-login-another">
+                <img src="./image/icon_fb.png" alt="FaceBook" class="icon-login-another">
+                <img src="./image/icon_gg.png" alt="Google" class="icon-login-another">
+                <img src="./image/icon_apple.png" alt="Apple" class="icon-login-another">
+            </div>
+
+            <div class="modal-input-section">
+                <input type="email" placeholder="Địa chỉ email..." class="email">
+                <input type="password" placeholder="Nhập mật khẩu..." class="email password">
+                <a href="" class="forgot-password">Quên mật khẩu của bạn?</a>
+            </div>
+
+            <div class="modal-bnt-login">
+                <a href="" class="bnt-login">Đăng Nhập</a>
+            </div>
+
+            <div class="modal-title">
+                <p class="title-content">Bây giờ bạn cần một tài khoản để gửi / xem các yêu cầu dịch vụ khách hàng, xem
+                    các đăng ký các sản phẩm của bạn, thanh toán hoặc sửa đổi thông tin cá nhân của bạn. Thật nhanh
+                    chóng và dễ dàng để 'Đăng ký'. Vui lòng đảm bảo địa chỉ
+                    email của bạn là địa chỉ bạn đã cung cấp tại thời điểm đặt hàng, điều này sẽ cho phép bạn truy cập
+                    tất cả các dịch vụ bạn cần. </p>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End: modal login -->
+</div>
+<!--Begin: modal register--->
+<div class="modal-register js-modal-register">
+    <div class="modal-container-register js-modal-container-register">
+
+        <header class="modal-header">
+            Tài Khoản Của Bạn!
+        </header>
+
+        <div class="modal-close-register js-modal-close-register">
+            <i class="ti-close icon-close-register"></i>
+        </div>
+
+        <div class="modal-body2">
+            <div class="modal-body-register">
+                <div class="modal-login sub js-login-modal col-half">Đăng Nhập</div>
+                <div class="modal-sub-register sub col-half">Đăng Ký</div>
+            </div>
+
+            <div class="sub-login">
+                <p class="login-another">______________ Đăng Ký Bằng Cách Khác _____________</p>
+            </div>
+
+            <div class="modal-register-another">
+                <img src="./image/icon_fb.png" alt="FaceBook" class="icon-login-another">
+                <img src="./image/icon_gg.png" alt="Google" class="icon-login-another">
+                <img src="./image/icon_apple.png" alt="Apple" class="icon-login-another">
+            </div>
+
+            <div class="modal-input-section">
+                <input type="email" placeholder="Địa chỉ email..." class="email">
+                <input type="password" placeholder="Nhập mật khẩu..." class="email password">
+                <input type="password" placeholder="Xác nhận mật khẩu..." class="email password">
+                <input type="checkbox" name="" class="modal-checkbox">
+                <p class="checkbox">
+                    Vui lòng gửi email cho tôi với các ưu đãi mới nhất</p>
+            </div>
+
+            <div class="modal-bnt-register">
+                <a href="" class="bnt-login">Đăng Ký</a>
+            </div>
+
+            <div class="modal-title">
+                <p class="title-content">Vui lòng đảm bảo địa chỉ email của bạn là địa chỉ bạn đã cung cấp tại thời điểm
+                    đăng ký, điều này sẽ cho phép bạn truy cập tất cả các dịch vụ bạn cần.</p>
+            </div>
+        </div>
+    </div>
+    <!-- End: modal register -->
+</div>
+<!-- End: login register -->
+
+
+<!-- Begin: modal message -->
+<div class="icon-message">
+    <img class="icon-mess js-open-mess" src="./image/icon/icon-mess.ico" alt="">
+</div>
+<div class="modal-message message">
+    <div class="mess-section">
+        <div class="mess-header">
+            <img class="icon-logo " src="./image/logo.png" alt="">
+            <img class="icon-close js-close-mess" src="./image/icon/icon-close.png" alt="">
+        </div>
+        <div class="mess-content">
+            <div class="mess-content-section">
+                <p class="mess-title">Hiện tại, chúng tôi không trực tuyến.
+                    Quý khách vui lòng để lại tin nhắn,
+                    chúng tôi sẽ sớm liên hệ trong buổi
+                    làm việc tiếp theo. Trân trọng cảm ơn.</p>
+                <p class="name">Họ & Tên *</p>
+                <input type="text">
+                <p class="name">Địa chỉ Email *</p>
+                <input type="email">
+                <p class="name">Điện thoại *</p>
+                <input type="phone">
+                <p class="mess">Tin nhắn *</p>
+                <textarea class="text-send" type="text" rows="4" spellcheck="false"> </textarea>
+                <button class="send">Để lại tin nhắn</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End: modal message -->
+<script src="./javascript/hung-js.js"></script>
+
+<script>
+    const checkboxes = document.querySelectorAll('input[name="brand"]');
+    const hiddenInput = document.querySelector('input[name="brands"]');
+
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('click', (event) => {
+            const selectedValues = Array.from(checkboxes)
+                .filter((checkbox) => checkbox.checked)
+                .map((checkbox) => checkbox.value);
+
+            hiddenInput.value = selectedValues.join('/');
+        });
+    });
+
+    const checkboxesSize = document.querySelectorAll('input[name="size"]');
+    const hiddenInputSize = document.querySelector('input[name="sizes"]');
+
+    checkboxesSize.forEach((checkbox) => {
+        checkbox.addEventListener('click', (event) => {
+            const selectedValues = Array.from(checkboxesSize)
+                .filter((checkbox) => checkbox.checked)
+                .map((checkbox) => checkbox.value);
+
+            hiddenInputSize.value = selectedValues.join('/');
+        });
+    });
+</script>
+
+</body>
+
+</html>
